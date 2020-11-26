@@ -94,3 +94,8 @@ steps:
         -backend-config=client_secret="$servicePrincipalKey"
     workingDirectory: ${{ parameters.TerraformDirectory }}
     addSpnToEnvironment: true
+- task: AzureCLI@2
+  inputs:
+    azureSubscription: 'My Azure subscription(4c1338f5-129d-413f-99db-c149fcc24051)'
+    scriptType: 'ps'
+    scriptLocation: 'inlineScript'
